@@ -36,6 +36,7 @@ jobs:
         ZOWE_OPT_USER: ${{ secrets.ZOWE_USERNAME }}
         ZOWE_OPT_PASSWORD: ${{ secrets.ZOWE_PASSWORD }}
         ZOWE_OPT_REJECT_UNAUTHORIZED: "false" # Set to true if using valid SSL certificates
+        ZOWE_CLI_HOME: /tmp/.zowe # Use a temporary directory for Zowe CLI configuration (prevent mkdir() errors)
       run: |
         chmod +x .github/scripts/zowe_operations.sh
         .github/scripts/zowe_operations.sh
