@@ -48,8 +48,13 @@ jobs:
         .github/scripts/zowe_operations.sh
     - name: Run COBOL Check on Mainframe
       env:
-        ZOWE_USERNAME: ${{ secrets.ZOWE_USERNAME }}
-        ZOWE_PASSWORD: ${{ secrets.ZOWE_PASSWORD }}
+        # Map variables to bypass the interactive prompt or config profiles
+        ZOWE_OPT_HOST: ${{ secrets.ZOWE_HOST }}
+        ZOWE_OPT_PORT: ${{ secrets.ZOWE_PORT }}
+        ZOWE_OPT_USER: ${{ secrets.ZOWE_USERNAME }}
+        ZOWE_OPT_PASSWORD: ${{ secrets.ZOWE_PASSWORD }}
+        ZOWE_OPT_REJECT_UNAUTHORIZED: "false" # Set to true if using valid SSL certificates
+        ZOWE_CLI_HOME: /tmp/.zowe # Use a temporary directory for Zowe CLI configuration (prevent mkdir() errors)
       run: |
         chmod +x .github/scripts/mainframe_operations.sh
         .github/scripts/mainframe_operations.sh
