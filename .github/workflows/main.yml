@@ -12,6 +12,22 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+    - name: Install Zowe CLI
+      run: npm install -g @zowe/cli@zowe-v3-lts
+    - name: Execute Mainframe Action
+      env:
+        # Map variables to bypass the interactive prompt or config profiles
+        ZOWE_OPT_HOST: ${{ secrets.ZOWE_HOST }}
+        ZOWE_OPT_PORT: ${{ secrets.ZOWE_PORT }}
+        ZOWE_OPT_USER: ${{ secrets.ZOWE_USERNAME }}
+        ZOWE_OPT_PASSWORD: ${{ secrets.ZOWE_PASSWORD }}
+        ZOWE_OPT_REJECT_UNAUTHORIZED: "false" # Set to true if using valid SSL certificates
+      run: |
+        echo "Checking z/OSMF connection status..."
+        zowe zosmf check status
+      
+        echo "Listing data sets..."
+        zowe zos-files list data-set "YOUR.MAINFRAME.DATASET.*"
     - name: Setup Mainframe Environment and Upload COBOL Check
       env:
         ZOWE_USERNAME: ${{ secrets.ZOWE_USERNAME }}
