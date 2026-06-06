@@ -18,12 +18,14 @@ echo "Changed to $(pwd)"
 ls -al
 
 # Make cobolcheck executable
-chmod +x cobolcheck
+chmod +x cblcheck.sh
 echo "Made cobolcheck executable"
 
 # Make script in scripts directory executable
 cd scripts
-chmod +x linux_gnucobol_run_tests
+rm -rf linux_gnucobol_run_tests
+chmod 777 run_tests.sh
+ln -sf run_tests.sh linux_gnucobol_run_tests
 echo "Made linux_gnucobol_run_tests executable"
 cd ..
 
@@ -33,7 +35,7 @@ run_cobolcheck() {
   echo "Running cobolcheck for $program"
 
   # Run cobolcheck, but don't exit if it fails
-  ./cobolcheck -p $program
+  ./cblcheck -p $program
   echo "Cobolcheck execution completed for $program (exceptions may have occurred)"
 
   # Check if CC##99.CBL was created, regardless of cobolcheck exit status
