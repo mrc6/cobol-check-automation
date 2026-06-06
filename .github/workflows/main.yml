@@ -30,8 +30,12 @@ jobs:
         zowe zos-files list data-set "Z87588.*"
     - name: Setup Mainframe Environment and Upload COBOL Check
       env:
-        ZOWE_USERNAME: ${{ secrets.ZOWE_USERNAME }}
-        ZOWE_PASSWORD: ${{ secrets.ZOWE_PASSWORD }}
+        # Map variables to bypass the interactive prompt or config profiles
+        ZOWE_OPT_HOST: ${{ secrets.ZOWE_HOST }}
+        ZOWE_OPT_PORT: ${{ secrets.ZOWE_PORT }}
+        ZOWE_OPT_USER: ${{ secrets.ZOWE_USERNAME }}
+        ZOWE_OPT_PASSWORD: ${{ secrets.ZOWE_PASSWORD }}
+        ZOWE_OPT_REJECT_UNAUTHORIZED: "false" # Set to true if using valid SSL certificates
       run: |
         chmod +x .github/scripts/zowe_operations.sh
         .github/scripts/zowe_operations.sh
