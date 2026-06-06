@@ -27,7 +27,7 @@ jobs:
         zowe zosmf check status
       
         echo "Listing data sets..."
-        zowe zos-files list data-set "YOUR.MAINFRAME.DATASET.*"
+        zowe zos-files list data-set "Z87588.*"
     - name: Setup Mainframe Environment and Upload COBOL Check
       env:
         ZOWE_USERNAME: ${{ secrets.ZOWE_USERNAME }}
