@@ -39,9 +39,9 @@ run_cobolcheck() {
   echo "Cobolcheck execution completed for $program (exceptions may have occurred)"
 
   # Check if CC##99.CBL was created, regardless of cobolcheck exit status
-  if [ -f "CC##99.CBL" ]; then
+  if [ -f "./testruns/CC##99.CBL" ]; then
   # Copy to the MVS dataset
-    if cp CC##99.CBL "//'${ZOWE_USERNAME}.CBL($program)'"; then
+    if zowe zos-files upload file-to-data-set ./testruns/CC##99.CBL "${ZOWE_USERNAME}.CBL($program)"; then
       echo "Copied CC##99.CBL to ${ZOWE_USERNAME}.CBL($program)"
     else
       echo "Failed to copy CC##99.CBL to ${ZOWE_USERNAME}.CBL($program)"
@@ -52,7 +52,7 @@ run_cobolcheck() {
   
   # Copy the JCL file if it exists
   if [ -f "${program}.JCL" ]; then
-    if cp ${program}.JCL "//'${ZOWE_USERNAME}.JCL($program)'"; then
+    if zowe zos-files upload file-to-data-set $program "${ZOWE_USERNAME}.JCL($program)"; then
       echo "Copied ${program}.JCL to ${ZOWE_USERNAME}.JCL($program)"
     else
       echo "Failed to copy ${program}.JCL to ${ZOWE_USERNAME}.JCL($program)"

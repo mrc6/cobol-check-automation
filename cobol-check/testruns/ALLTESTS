@@ -1,67 +1,246 @@
-      *From file: /root/my-documents/temp/Cobol/automated-tests/cobol-check-automation/cobol-check/src/test/cobol/ALPHA/AlphaExpectationsTest.cut
-           TestSuite "Tests of alphanumeric expectations"
-      
-           TestCase "Equality with an alphanumeric literal using TO BE"
-           move "value1" to ws-field-1
-           Expect ws-field-1 to be "value1"
-      
-           TestCase "Equality with an alphanumeric literal using TO EQUAL"
-           move "value2" to ws-field-1
-           Expect ws-field-1 to equal "value2"
-      
-           TestCase "Equality with an alphanumeric literal using '='"
-           move "value3" to ws-field-1
-           Expect ws-field-1 = "value3"
-      
-           TestCase "Equality with an alphanumeric literal and reference modification"
-           move "Hello, World!" to ws-field-2
-           Expect ws-field-2(8:5) to be "World"
-      
-           TestCase "Non-equality with an alphanumeric literal using TO BE"
-           move "value4" to ws-field-1
-           Expect ws-field-1 not to be "value1"
-      
-           TestCase "Non-equality with an alphanumeric literal using TO EQUAL"
-           move "value5" to ws-field-1
-           Expect ws-field-1 not to equal "value1"
-      
-           TestCase "Non-equality with an alphanumeric literal using '!='"
-           move "value6" to ws-field-1
-           Expect ws-field-1 != "value1"
-      
-           TestCase "Non-equality with an alphanumeric literal and reference modification"
-           move "Hello, World!" to ws-field-2
-           Expect ws-field-2(8:6) not to be "World"
-      
-           TestCase "Greater-than sign with an alphanumeric literal"
-           move "Beta" to ws-field-1
-           move "Alpha" to ws-field-2
-           Expect ws-field-1 > "Alpha"
-      
-           TestCase "Less-than sign with an alphanumeric literal"
-           move "Beta" to ws-field-1
-           move "Alpha" to ws-field-2
-           Expect ws-field-2 < "Beta"
-      
-           TestCase "Not greater-than sign with an alphanumeric literal"
-           move "Beta" to ws-field-1
-           move "Alpha" to ws-field-2
-           Expect ws-field-2 not > "Beta"
-      
-           TestCase "Not less-than sign with an alphanumeric literal"
-           move "Beta" to ws-field-1
-           move "Alpha" to ws-field-2
-           Expect ws-field-1 not < "Alpha"
-      
-           TestCase "Display numeric"
-           move 6 to ws-display-numeric
-           expect ws-display-numeric to be 6
-      
-           TestCase "Variable must be SPACE"
-           move space to ws-field-1
-           expect ws-field-1 to be space
-      
-           TestCase "Variable must be SPACES"
-           move spaces to ws-field-1
-           expect ws-field-1 to be spaces
-           
+      *From file: /root/my-documents/temp/Cobol/automated-tests/cobol-check-automation/cobol-check/src/test/cobol/NUMBERS/SymbolicRelationsTest.cut
+           TestSuite "Verify Cobol Check handles numeric relations properly"
+
+           TestCase "Equal sign with literal compare"
+           Move 25.74 to WS-FIELD-1
+           Expect WS-FIELD-1 = 25.74
+
+           TestCase "Equal sign with literal compare (should fail)"
+           Move 25.74 to WS-FIELD-1
+           Expect WS-FIELD-1 = 25.75
+
+* comment 1
+
+           TestCase "Not equal sign with literal compare"
+           Move 25.74 to WS-FIELD-1
+           Expect WS-FIELD-1 NOT = 25.75
+
+           *comment 2
+
+           TestCase "Not equal sign with literal compare (should fail)"
+           Move 25.74 to WS-FIELD-1
+           Expect WS-FIELD-1 not = 25.74
+
+           TestCase "Not-equal sign with literal compare"
+           Move 13.6 to WS-FIELD-1
+           Expect WS-FIELD-1 != 25.74
+
+           TestCase "Not-equal sign with literal compare (should fail)"
+           Move 13.6 to WS-FIELD-1
+           Expect WS-FIELD-1 != 13.6
+
+           TestCase "Not not-equal sign with literal compare"
+           Move 13.6 to WS-FIELD-1
+           Expect WS-FIELD-1 NOT != 13.6
+
+           TestCase "Not not-equal sign with literal compare (should fail)"
+           Move 13.7 to WS-FIELD-1
+           Expect WS-FIELD-1 not != 13.6
+
+           TestCase "Equal sign with ield compare"
+           Move 25.74 to WS-FIELD-1
+           Expect WS-FIELD-1 = 25.74
+
+           TestCase "Equal sign with field compare (should fail)"
+           Move 25.74 to WS-FIELD-1
+           Expect WS-FIELD-1 = 25.75
+
+           TestCase "Not equal sign with field compare"
+           Move 25.74 to WS-FIELD-1
+           Expect WS-FIELD-1 not = 25.75
+
+           TestCase "Not equal sign with field compare (should fail)"
+           Move 25.74 to WS-FIELD-1
+           Expect WS-FIELD-1 not = 25.74
+
+           TestCase "Not-equal sign with field compare"
+           Move 25.74 to WS-FIELD-1
+           Expect WS-FIELD-1 != 25.75
+
+           TestCase "Not-equal sign with field compare (should fail)"
+           Move 25.74 to WS-FIELD-1
+           Expect WS-FIELD-1 != 25.74
+
+           TestCase "Not not-equal sign with field compare"
+           Move 25.74 to WS-FIELD-1
+           Expect WS-FIELD-1 NOT != 25.74
+
+           TestCase "Not not-equal sign with field compare (should fail)"
+           Move 25.75 to WS-FIELD-1
+           Expect WS-FIELD-1 not != 25.74
+
+           TestCase "Less-than sign with literal compare"
+           Move 18.067 to WS-FIELD-1
+           Expect WS-FIELD-1 < 18.068
+
+           TestCase "Less-than sign with literal compare (should fail)"
+           Move 18.067 to WS-FIELD-1
+           Expect WS-FIELD-1 < 18.066
+
+           TestCase "Not less-than sign with literal compare"
+           Move 18.068 to WS-FIELD-1
+           Expect WS-FIELD-1 NOT < 18.068
+
+           TestCase "Not less-than sign with literal compare (should fail)"
+           Move 18.066 to WS-FIELD-1
+           Expect WS-FIELD-1 Not < 18.067
+
+           TestCase "Less-than sign with field compare"
+           Move 416.071 to WS-FIELD-1
+           Expect WS-FIELD-1 < 416.072
+
+           TestCase "Less-than sign with field compare (should fail)"
+           Move 416.072 to WS-FIELD-1
+           Expect WS-FIELD-1  < 416.072
+
+           TestCase "Not less-than sign with field compare"
+           Move 416.072 to WS-FIELD-1
+           Expect WS-FIELD-1 not < 416.071
+
+           TestCase "Not less-than sign with field compare (should fail)"
+           Move 416.071 to WS-FIELD-1
+           Expect WS-FIELD-1 not < 416.072
+
+           TestCase "Greater-than sign with literal compare"
+           Move 18.067 to WS-FIELD-1
+           Expect WS-FIELD-1 > 17.01
+
+           TestCase "Greater-than sign with literal compare (should fail)"
+           Move 9.805 to WS-FIELD-1
+           Expect WS-FIELD-1 > 10
+
+           TestCase "Not greater-than sign with literal compare"
+           move 107.701 to ws-field-1
+           expect ws-field-1 not > 107.701
+
+           TestCase "Not greater-than sign with literal compare (should fail)"
+           move 107.702 to ws-field-1
+           expect ws-field-1 not > 107.701
+
+           TestCase "Greater-than sign with field compare"
+           Move 1766.03145 to WS-FIELD-1
+           Expect WS-FIELD-1 > 1766.03144
+
+           TestCase "Greater-than sign with field compare (should fail)"
+           Move 1766.03143 to WS-FIELD-1
+           Expect WS-FIELD-1 > 1766.03144
+
+           TestCase "Not greater-than sign with field to field compare"
+           Move 1766.03144 to WS-FIELD-1
+           Expect WS-FIELD-1 Not > 1766.03144
+
+           TestCase "Not greater-than sign with field compare (should fail)"
+           Move 1766.03145 to WS-FIELD-1
+           Expect WS-FIELD-1 NOT > 1766.03144
+
+           TestCase "Greater-than-or-equal-to sign with literal compare when greater"
+           Move 18.067 to WS-FIELD-1
+           Expect WS-FIELD-1 >= 18.066
+
+           TestCase "Greater-than-or-equal-to sign with literal compare when equal"
+           Move 18.067 to WS-FIELD-1
+           Expect WS-FIELD-1 >= 18.067
+
+           TestCase "Greater-than-or-equal-to sign with literal compare (should fail)"
+           Move 9.805 to WS-FIELD-1
+           Expect WS-FIELD-1 >= 10
+
+           TestCase "Not greater-than-or-equal-to sign with literal compare when less"
+           Move 18.066 to WS-FIELD-1
+           Expect WS-FIELD-1 not >= 18.067
+
+           TestCase "Not greater-than-or-equal-to sign with literal compare when equal (should fail)"
+           Move 18.067 to WS-FIELD-1
+           Expect WS-FIELD-1 not >= 18.067
+
+           TestCase "Greater-than-or-equal-to sign with literal compare when greater (should fail)"
+           Move 13.45 to WS-FIELD-1
+           Expect WS-FIELD-1 not >= 13.44
+
+           TestCase "Greater-than-or-equal-to-sign with field compare when equal"
+           move 475.062 to ws-field-1
+           expect ws-field-1 >= 475.062
+
+           TestCase "Greater-than-or-equal-to-sign with field compare when greater"
+           move 475.063 to ws-field-1
+           expect ws-field-1 >= 475.062
+
+           TestCase "Greater-than-or-equal-to-sign with field compare when less (should fail)"
+           move 475.061 to ws-field-1
+           expect ws-field-1 >= 475.062
+
+           TestCase "Not greater-than-or-equal-to-sign with field compare when less"
+           move 475.062 to ws-field-1
+           expect ws-field-1 not >= 475.063
+
+           TestCase "Not greater-than-or-equal-to-sign with field compare when equal (should fail)"
+           move 475.062 to ws-field-1
+           expect ws-field-1 not >= 475.062
+
+           TestCase "Not greater-than-or-equal-to-sign with field compare when greater (should fail)"
+           move 475.063 to ws-field-1
+           expect ws-field-1 not >= 475.062
+
+           TestCase "Less-than-or-equal-to-sign with field compare when equal"
+           move 475.062 to ws-field-1
+           expect ws-field-1 <= 475.062
+
+           TestCase "Less-than-or-equal-to-sign with field compare when less"
+           move 475.062 to ws-field-1
+           expect ws-field-1 <= 475.063
+
+           TestCase "Less-than-or-equal-to-sign with field compare when greater (should fail)"
+           move 475.063 to ws-field-1
+           expect ws-field-1 <= 475.062
+
+           TestCase "Not less-than-or-equal-to-sign with field compare when greater"
+           move 475.063 to ws-field-1
+           expect ws-field-1 not <= 475.062
+
+           TestCase "Not less-than-or-equal-to-sign with field compare when equal (should fail)"
+           move 475.062 to ws-field-1
+           expect ws-field-1 not <= 475.062
+
+           TestCase "Not less-than-or-equal-to-sign with field compare when less (should fail)"
+           move 475.062 to ws-field-1
+           expect ws-field-1 not <= 475.063
+
+           TestCase "Display Numeric field equals literal"
+           move 123.45 to ws-display-field
+           expect ws-display-field to be 123.45
+
+           TestCase "Display Numeric field equals literal with negative numbers"
+           move -123.45 to ws-display-field
+           expect ws-display-field to be -123.45
+
+           TestCase "Variable must be ZERO"
+           move zero to ws-field-3
+           expect ws-field-3 to be zero
+
+           TestCase "Variable must be ZEROS"
+           move zeros to ws-field-3
+           expect ws-field-3 to be zeros
+
+           TestCase "Variable must be ZEROES"
+           move zeroes to ws-field-3
+           expect ws-field-3 to be zeroes
+
+           TestCase "Variable must be NUMERIC 123"
+           move 123 to ws-field-3
+           expect ws-field-3 to be numeric 123
+
+           TestCase "Variable must be NUMERIC -123"
+           move -123 to ws-field-3
+           expect ws-field-3 to be numeric -123
+
+           TestCase "Variable must be 123"
+           move 123 to ws-field-3
+           expect ws-field-3 to be 123
+
+           TestCase "Variable must be -123"
+           move -123 to ws-field-3
+           expect ws-field-3 to be -123
+
+           TestCase "Variable must be 4"
+           move 4 to ws-num-occ (1)
+           expect ws-num-occ(1) to be numeric 4
