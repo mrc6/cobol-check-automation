@@ -35,7 +35,7 @@ run_cobolcheck() {
   echo "Running cobolcheck for $program"
 
   # Run cobolcheck, but don't exit if it fails
-  ./cblcheck -p $program
+  ./cblcheck.sh -p $program
   echo "Cobolcheck execution completed for $program (exceptions may have occurred)"
 
   # Check if CC##99.CBL was created, regardless of cobolcheck exit status
