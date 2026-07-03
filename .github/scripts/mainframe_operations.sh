@@ -65,8 +65,7 @@ run_cobolcheck() {
 # Run for each program
 echo "$(pwd)"
 echo "Creating the testlist file"
-echo "ls ./src/test/cobol"
-echo "ls ./src/test/cobol > testlist"
+ls "$(pwd)/src/test/cobol" > testlist
 echo "testlist created"
 echo "cat testlist"
 
