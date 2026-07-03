@@ -62,19 +62,14 @@ run_cobolcheck() {
   fi
 }
 
-# Run for each program
+# Run for each program in testlist
 echo "$(pwd)"
 echo "Creating the testlist file"
 ls "$(pwd)/src/test/cobol" > testlist
 echo "testlist created"
-echo "cat testlist"
-
-#for program in NUMBERS EMPPAY DEPTPAY; do
-#  run_cobolcheck $program
-#done
+cat testlist
 
 while IFS= read -r line; do
-    #echo "$line"
     run_cobolcheck "$line"
 done < "testlist"
 
