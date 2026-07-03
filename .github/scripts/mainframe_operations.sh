@@ -32,7 +32,7 @@ cd ..
 # Function to run cobolcheck and copy files
 run_cobolcheck() {
   program=$1
-  echo "Running cobolcheck for $program"
+  echo "************************ Running cobolcheck for $program ************************"
 
   # Run cobolcheck, but don't exit if it fails
   ./cblcheck.sh -p $program
@@ -63,9 +63,20 @@ run_cobolcheck() {
 }
 
 # Run for each program
-for program in NUMBERS EMPPAY DEPTPAY; do
-  run_cobolcheck $program
-done
+echo "Creating the testlist file"
+echo "ls ./src/test/cobol > testlist"
+echo "testlist created"
+echo "cat testlist"
+
+#for program in NUMBERS EMPPAY DEPTPAY; do
+#  run_cobolcheck $program
+#done
+
+while IFS= read -r line; do
+    #echo "$line"
+    run_cobolcheck "$line"
+done < "testlist"
+
 echo "Mainframe operations completed"
 
 #EOF
