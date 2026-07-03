@@ -33,7 +33,7 @@ jobs:
         zowe zosmf check status
       
         echo "Listing data sets..."
-        zowe zos-files list data-set "Z87588.*"
+        zowe zos-files list data-set "${ZOWE_OPT_USER}.*"
     - name: Setup Mainframe Environment and Upload COBOL Check
       env:
         # Map variables to bypass the interactive prompt or config profiles
