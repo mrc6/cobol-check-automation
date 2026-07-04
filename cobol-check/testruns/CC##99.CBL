@@ -172,24 +172,6 @@
            MOVE SPACES                                                          
                TO UT-TEST-CASE-NAME                                             
            PERFORM UT-AFTER-EACH                                                
-      *-------- "Equal sign with literal compare (should fail)"                 
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-BEFORE-EACH                                               
-           MOVE "Equal sign with literal compare (should fail)"                 
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-INITIALIZE-MOCK-COUNT                                     
-            MOVE 25.74 TO WS-FIELD-1                                            
-           ADD 1 TO UT-TEST-CASE-COUNT                                          
-           SET UT-NORMAL-COMPARE TO TRUE                                        
-           SET UT-NUMERIC-COMPARE TO TRUE                                       
-           MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
-           MOVE 25.75 TO UT-EXPECTED-NUMERIC                                    
-           SET UT-RELATION-EQ TO TRUE                                           
-           PERFORM UT-CHECK-EXPECTATION                                         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-AFTER-EACH                                                
       *-------- "Not equal sign with literal compare"                           
            MOVE SPACES                                                          
                TO UT-TEST-CASE-NAME                                             
@@ -203,24 +185,6 @@
            SET UT-NUMERIC-COMPARE TO TRUE                                       
            MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
            MOVE 25.75 TO UT-EXPECTED-NUMERIC                                    
-           SET UT-RELATION-EQ TO TRUE                                           
-           PERFORM UT-CHECK-EXPECTATION                                         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-AFTER-EACH                                                
-      *-------- "Not equal sign with literal compare (should fail)"             
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-BEFORE-EACH                                               
-           MOVE "Not equal sign with literal compare (should fail)"             
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-INITIALIZE-MOCK-COUNT                                     
-            MOVE 25.74 TO WS-FIELD-1                                            
-           ADD 1 TO UT-TEST-CASE-COUNT                                          
-           SET UT-REVERSE-COMPARE TO TRUE                                       
-           SET UT-NUMERIC-COMPARE TO TRUE                                       
-           MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
-           MOVE 25.74 TO UT-EXPECTED-NUMERIC                                    
            SET UT-RELATION-EQ TO TRUE                                           
            PERFORM UT-CHECK-EXPECTATION                                         
            MOVE SPACES                                                          
@@ -244,24 +208,6 @@
            MOVE SPACES                                                          
                TO UT-TEST-CASE-NAME                                             
            PERFORM UT-AFTER-EACH                                                
-      *-------- "Not-equal sign with literal compare (should fail)"             
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-BEFORE-EACH                                               
-           MOVE "Not-equal sign with literal compare (should fail)"             
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-INITIALIZE-MOCK-COUNT                                     
-            MOVE 13.6 TO WS-FIELD-1                                             
-           ADD 1 TO UT-TEST-CASE-COUNT                                          
-           SET UT-REVERSE-COMPARE TO TRUE                                       
-           SET UT-NUMERIC-COMPARE TO TRUE                                       
-           MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
-           MOVE 13.6 TO UT-EXPECTED-NUMERIC                                     
-           SET UT-RELATION-EQ TO TRUE                                           
-           PERFORM UT-CHECK-EXPECTATION                                         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-AFTER-EACH                                                
       *-------- "Not not-equal sign with literal compare"                       
            MOVE SPACES                                                          
                TO UT-TEST-CASE-NAME                                             
@@ -270,24 +216,6 @@
                TO UT-TEST-CASE-NAME                                             
            PERFORM UT-INITIALIZE-MOCK-COUNT                                     
             MOVE 13.6 TO WS-FIELD-1                                             
-           ADD 1 TO UT-TEST-CASE-COUNT                                          
-           SET UT-NORMAL-COMPARE TO TRUE                                        
-           SET UT-NUMERIC-COMPARE TO TRUE                                       
-           MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
-           MOVE 13.6 TO UT-EXPECTED-NUMERIC                                     
-           SET UT-RELATION-EQ TO TRUE                                           
-           PERFORM UT-CHECK-EXPECTATION                                         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-AFTER-EACH                                                
-      *-------- "Not not-equal sign with literal compare (should fail)"         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-BEFORE-EACH                                               
-           MOVE "Not not-equal sign with literal compare (should fail)"         
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-INITIALIZE-MOCK-COUNT                                     
-            MOVE 13.7 TO WS-FIELD-1                                             
            ADD 1 TO UT-TEST-CASE-COUNT                                          
            SET UT-NORMAL-COMPARE TO TRUE                                        
            SET UT-NUMERIC-COMPARE TO TRUE                                       
@@ -316,24 +244,6 @@
            MOVE SPACES                                                          
                TO UT-TEST-CASE-NAME                                             
            PERFORM UT-AFTER-EACH                                                
-      *-------- "Equal sign with field compare (should fail)"                   
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-BEFORE-EACH                                               
-           MOVE "Equal sign with field compare (should fail)"                   
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-INITIALIZE-MOCK-COUNT                                     
-            MOVE 25.74 TO WS-FIELD-1                                            
-           ADD 1 TO UT-TEST-CASE-COUNT                                          
-           SET UT-NORMAL-COMPARE TO TRUE                                        
-           SET UT-NUMERIC-COMPARE TO TRUE                                       
-           MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
-           MOVE 25.75 TO UT-EXPECTED-NUMERIC                                    
-           SET UT-RELATION-EQ TO TRUE                                           
-           PERFORM UT-CHECK-EXPECTATION                                         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-AFTER-EACH                                                
       *-------- "Not equal sign with field compare"                             
            MOVE SPACES                                                          
                TO UT-TEST-CASE-NAME                                             
@@ -347,24 +257,6 @@
            SET UT-NUMERIC-COMPARE TO TRUE                                       
            MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
            MOVE 25.75 TO UT-EXPECTED-NUMERIC                                    
-           SET UT-RELATION-EQ TO TRUE                                           
-           PERFORM UT-CHECK-EXPECTATION                                         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-AFTER-EACH                                                
-      *-------- "Not equal sign with field compare (should fail)"               
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-BEFORE-EACH                                               
-           MOVE "Not equal sign with field compare (should fail)"               
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-INITIALIZE-MOCK-COUNT                                     
-            MOVE 25.74 TO WS-FIELD-1                                            
-           ADD 1 TO UT-TEST-CASE-COUNT                                          
-           SET UT-REVERSE-COMPARE TO TRUE                                       
-           SET UT-NUMERIC-COMPARE TO TRUE                                       
-           MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
-           MOVE 25.74 TO UT-EXPECTED-NUMERIC                                    
            SET UT-RELATION-EQ TO TRUE                                           
            PERFORM UT-CHECK-EXPECTATION                                         
            MOVE SPACES                                                          
@@ -388,24 +280,6 @@
            MOVE SPACES                                                          
                TO UT-TEST-CASE-NAME                                             
            PERFORM UT-AFTER-EACH                                                
-      *-------- "Not-equal sign with field compare (should fail)"               
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-BEFORE-EACH                                               
-           MOVE "Not-equal sign with field compare (should fail)"               
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-INITIALIZE-MOCK-COUNT                                     
-            MOVE 25.74 TO WS-FIELD-1                                            
-           ADD 1 TO UT-TEST-CASE-COUNT                                          
-           SET UT-REVERSE-COMPARE TO TRUE                                       
-           SET UT-NUMERIC-COMPARE TO TRUE                                       
-           MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
-           MOVE 25.74 TO UT-EXPECTED-NUMERIC                                    
-           SET UT-RELATION-EQ TO TRUE                                           
-           PERFORM UT-CHECK-EXPECTATION                                         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-AFTER-EACH                                                
       *-------- "Not not-equal sign with field compare"                         
            MOVE SPACES                                                          
                TO UT-TEST-CASE-NAME                                             
@@ -414,24 +288,6 @@
                TO UT-TEST-CASE-NAME                                             
            PERFORM UT-INITIALIZE-MOCK-COUNT                                     
             MOVE 25.74 TO WS-FIELD-1                                            
-           ADD 1 TO UT-TEST-CASE-COUNT                                          
-           SET UT-NORMAL-COMPARE TO TRUE                                        
-           SET UT-NUMERIC-COMPARE TO TRUE                                       
-           MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
-           MOVE 25.74 TO UT-EXPECTED-NUMERIC                                    
-           SET UT-RELATION-EQ TO TRUE                                           
-           PERFORM UT-CHECK-EXPECTATION                                         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-AFTER-EACH                                                
-      *-------- "Not not-equal sign with field compare (should fail)"           
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-BEFORE-EACH                                               
-           MOVE "Not not-equal sign with field compare (should fail)"           
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-INITIALIZE-MOCK-COUNT                                     
-            MOVE 25.75 TO WS-FIELD-1                                            
            ADD 1 TO UT-TEST-CASE-COUNT                                          
            SET UT-NORMAL-COMPARE TO TRUE                                        
            SET UT-NUMERIC-COMPARE TO TRUE                                       
@@ -460,24 +316,6 @@
            MOVE SPACES                                                          
                TO UT-TEST-CASE-NAME                                             
            PERFORM UT-AFTER-EACH                                                
-      *-------- "Less-than sign with literal compare (should fail)"             
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-BEFORE-EACH                                               
-           MOVE "Less-than sign with literal compare (should fail)"             
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-INITIALIZE-MOCK-COUNT                                     
-            MOVE 18.067 TO WS-FIELD-1                                           
-           ADD 1 TO UT-TEST-CASE-COUNT                                          
-           SET UT-NORMAL-COMPARE TO TRUE                                        
-           SET UT-NUMERIC-COMPARE TO TRUE                                       
-           MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
-           MOVE 18.066 TO UT-EXPECTED-NUMERIC                                   
-           SET UT-RELATION-LT TO TRUE                                           
-           PERFORM UT-CHECK-EXPECTATION                                         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-AFTER-EACH                                                
       *-------- "Not less-than sign with literal compare"                       
            MOVE SPACES                                                          
                TO UT-TEST-CASE-NAME                                             
@@ -496,24 +334,6 @@
            MOVE SPACES                                                          
                TO UT-TEST-CASE-NAME                                             
            PERFORM UT-AFTER-EACH                                                
-      *-------- "Not less-than sign with literal compare (should fail)"         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-BEFORE-EACH                                               
-           MOVE "Not less-than sign with literal compare (should fail)"         
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-INITIALIZE-MOCK-COUNT                                     
-            MOVE 18.066 TO WS-FIELD-1                                           
-           ADD 1 TO UT-TEST-CASE-COUNT                                          
-           SET UT-REVERSE-COMPARE TO TRUE                                       
-           SET UT-NUMERIC-COMPARE TO TRUE                                       
-           MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
-           MOVE 18.067 TO UT-EXPECTED-NUMERIC                                   
-           SET UT-RELATION-LT TO TRUE                                           
-           PERFORM UT-CHECK-EXPECTATION                                         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-AFTER-EACH                                                
       *-------- "Less-than sign with field compare"                             
            MOVE SPACES                                                          
                TO UT-TEST-CASE-NAME                                             
@@ -522,24 +342,6 @@
                TO UT-TEST-CASE-NAME                                             
            PERFORM UT-INITIALIZE-MOCK-COUNT                                     
             MOVE 416.071 TO WS-FIELD-1                                          
-           ADD 1 TO UT-TEST-CASE-COUNT                                          
-           SET UT-NORMAL-COMPARE TO TRUE                                        
-           SET UT-NUMERIC-COMPARE TO TRUE                                       
-           MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
-           MOVE 416.072 TO UT-EXPECTED-NUMERIC                                  
-           SET UT-RELATION-LT TO TRUE                                           
-           PERFORM UT-CHECK-EXPECTATION                                         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-AFTER-EACH                                                
-      *-------- "Less-than sign with field compare (should fail)"               
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-BEFORE-EACH                                               
-           MOVE "Less-than sign with field compare (should fail)"               
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-INITIALIZE-MOCK-COUNT                                     
-            MOVE 416.072 TO WS-FIELD-1                                          
            ADD 1 TO UT-TEST-CASE-COUNT                                          
            SET UT-NORMAL-COMPARE TO TRUE                                        
            SET UT-NUMERIC-COMPARE TO TRUE                                       
@@ -568,24 +370,6 @@
            MOVE SPACES                                                          
                TO UT-TEST-CASE-NAME                                             
            PERFORM UT-AFTER-EACH                                                
-      *-------- "Not less-than sign with field compare (should fail)"           
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-BEFORE-EACH                                               
-           MOVE "Not less-than sign with field compare (should fail)"           
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-INITIALIZE-MOCK-COUNT                                     
-            MOVE 416.071 TO WS-FIELD-1                                          
-           ADD 1 TO UT-TEST-CASE-COUNT                                          
-           SET UT-REVERSE-COMPARE TO TRUE                                       
-           SET UT-NUMERIC-COMPARE TO TRUE                                       
-           MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
-           MOVE 416.072 TO UT-EXPECTED-NUMERIC                                  
-           SET UT-RELATION-LT TO TRUE                                           
-           PERFORM UT-CHECK-EXPECTATION                                         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-AFTER-EACH                                                
       *-------- "Greater-than sign with literal compare"                        
            MOVE SPACES                                                          
                TO UT-TEST-CASE-NAME                                             
@@ -604,24 +388,6 @@
            MOVE SPACES                                                          
                TO UT-TEST-CASE-NAME                                             
            PERFORM UT-AFTER-EACH                                                
-      *-------- "Greater-than sign with literal compare (should fail)"          
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-BEFORE-EACH                                               
-           MOVE "Greater-than sign with literal compare (should fail)"          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-INITIALIZE-MOCK-COUNT                                     
-            MOVE 9.805 TO WS-FIELD-1                                            
-           ADD 1 TO UT-TEST-CASE-COUNT                                          
-           SET UT-NORMAL-COMPARE TO TRUE                                        
-           SET UT-NUMERIC-COMPARE TO TRUE                                       
-           MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
-           MOVE 10 TO UT-EXPECTED-NUMERIC                                       
-           SET UT-RELATION-GT TO TRUE                                           
-           PERFORM UT-CHECK-EXPECTATION                                         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-AFTER-EACH                                                
       *-------- "Not greater-than sign with literal compare"                    
            MOVE SPACES                                                          
                TO UT-TEST-CASE-NAME                                             
@@ -630,26 +396,6 @@
                TO UT-TEST-CASE-NAME                                             
            PERFORM UT-INITIALIZE-MOCK-COUNT                                     
             MOVE 107.701 TO WS-FIELD-1                                          
-           ADD 1 TO UT-TEST-CASE-COUNT                                          
-           SET UT-REVERSE-COMPARE TO TRUE                                       
-           SET UT-NUMERIC-COMPARE TO TRUE                                       
-           MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
-           MOVE 107.701 TO UT-EXPECTED-NUMERIC                                  
-           SET UT-RELATION-GT TO TRUE                                           
-           PERFORM UT-CHECK-EXPECTATION                                         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-AFTER-EACH                                                
-      *-------- "Not greater-than sign with literal compare (should fail        
-      *)"                                                                       
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-BEFORE-EACH                                               
-           MOVE "Not greater-than sign with literal compare (should fail        
-      -    ")"                                                                  
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-INITIALIZE-MOCK-COUNT                                     
-            MOVE 107.702 TO WS-FIELD-1                                          
            ADD 1 TO UT-TEST-CASE-COUNT                                          
            SET UT-REVERSE-COMPARE TO TRUE                                       
            SET UT-NUMERIC-COMPARE TO TRUE                                       
@@ -678,24 +424,6 @@
            MOVE SPACES                                                          
                TO UT-TEST-CASE-NAME                                             
            PERFORM UT-AFTER-EACH                                                
-      *-------- "Greater-than sign with field compare (should fail)"            
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-BEFORE-EACH                                               
-           MOVE "Greater-than sign with field compare (should fail)"            
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-INITIALIZE-MOCK-COUNT                                     
-            MOVE 1766.03143 TO WS-FIELD-1                                       
-           ADD 1 TO UT-TEST-CASE-COUNT                                          
-           SET UT-NORMAL-COMPARE TO TRUE                                        
-           SET UT-NUMERIC-COMPARE TO TRUE                                       
-           MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
-           MOVE 1766.03144 TO UT-EXPECTED-NUMERIC                               
-           SET UT-RELATION-GT TO TRUE                                           
-           PERFORM UT-CHECK-EXPECTATION                                         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-AFTER-EACH                                                
       *-------- "Not greater-than sign with field to field compare"             
            MOVE SPACES                                                          
                TO UT-TEST-CASE-NAME                                             
@@ -704,24 +432,6 @@
                TO UT-TEST-CASE-NAME                                             
            PERFORM UT-INITIALIZE-MOCK-COUNT                                     
             MOVE 1766.03144 TO WS-FIELD-1                                       
-           ADD 1 TO UT-TEST-CASE-COUNT                                          
-           SET UT-REVERSE-COMPARE TO TRUE                                       
-           SET UT-NUMERIC-COMPARE TO TRUE                                       
-           MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
-           MOVE 1766.03144 TO UT-EXPECTED-NUMERIC                               
-           SET UT-RELATION-GT TO TRUE                                           
-           PERFORM UT-CHECK-EXPECTATION                                         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-AFTER-EACH                                                
-      *-------- "Not greater-than sign with field compare (should fail)"        
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-BEFORE-EACH                                               
-           MOVE "Not greater-than sign with field compare (should fail)"        
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-INITIALIZE-MOCK-COUNT                                     
-            MOVE 1766.03145 TO WS-FIELD-1                                       
            ADD 1 TO UT-TEST-CASE-COUNT                                          
            SET UT-REVERSE-COMPARE TO TRUE                                       
            SET UT-NUMERIC-COMPARE TO TRUE                                       
@@ -772,26 +482,6 @@
            MOVE SPACES                                                          
                TO UT-TEST-CASE-NAME                                             
            PERFORM UT-AFTER-EACH                                                
-      *-------- "Greater-than-or-equal-to sign with literal compare (sho        
-      *uld fail)"                                                               
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-BEFORE-EACH                                               
-           MOVE "Greater-than-or-equal-to sign with literal compare (sho        
-      -    "uld fail)"                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-INITIALIZE-MOCK-COUNT                                     
-            MOVE 9.805 TO WS-FIELD-1                                            
-           ADD 1 TO UT-TEST-CASE-COUNT                                          
-           SET UT-REVERSE-COMPARE TO TRUE                                       
-           SET UT-NUMERIC-COMPARE TO TRUE                                       
-           MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
-           MOVE 10 TO UT-EXPECTED-NUMERIC                                       
-           SET UT-RELATION-LT TO TRUE                                           
-           PERFORM UT-CHECK-EXPECTATION                                         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-AFTER-EACH                                                
       *-------- "Not greater-than-or-equal-to sign with literal compare         
       *when less"                                                               
            MOVE SPACES                                                          
@@ -807,46 +497,6 @@
            SET UT-NUMERIC-COMPARE TO TRUE                                       
            MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
            MOVE 18.067 TO UT-EXPECTED-NUMERIC                                   
-           SET UT-RELATION-LT TO TRUE                                           
-           PERFORM UT-CHECK-EXPECTATION                                         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-AFTER-EACH                                                
-      *-------- "Not greater-than-or-equal-to sign with literal compare         
-      *when equal (should fail)"                                                
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-BEFORE-EACH                                               
-           MOVE "Not greater-than-or-equal-to sign with literal compare         
-      -    "when equal (should fail)"                                           
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-INITIALIZE-MOCK-COUNT                                     
-            MOVE 18.067 TO WS-FIELD-1                                           
-           ADD 1 TO UT-TEST-CASE-COUNT                                          
-           SET UT-NORMAL-COMPARE TO TRUE                                        
-           SET UT-NUMERIC-COMPARE TO TRUE                                       
-           MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
-           MOVE 18.067 TO UT-EXPECTED-NUMERIC                                   
-           SET UT-RELATION-LT TO TRUE                                           
-           PERFORM UT-CHECK-EXPECTATION                                         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-AFTER-EACH                                                
-      *-------- "Greater-than-or-equal-to sign with literal compare when        
-      * greater (should fail)"                                                  
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-BEFORE-EACH                                               
-           MOVE "Greater-than-or-equal-to sign with literal compare when        
-      -    " greater (should fail)"                                             
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-INITIALIZE-MOCK-COUNT                                     
-            MOVE 13.45 TO WS-FIELD-1                                            
-           ADD 1 TO UT-TEST-CASE-COUNT                                          
-           SET UT-NORMAL-COMPARE TO TRUE                                        
-           SET UT-NUMERIC-COMPARE TO TRUE                                       
-           MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
-           MOVE 13.44 TO UT-EXPECTED-NUMERIC                                    
            SET UT-RELATION-LT TO TRUE                                           
            PERFORM UT-CHECK-EXPECTATION                                         
            MOVE SPACES                                                          
@@ -892,26 +542,6 @@
            MOVE SPACES                                                          
                TO UT-TEST-CASE-NAME                                             
            PERFORM UT-AFTER-EACH                                                
-      *-------- "Greater-than-or-equal-to-sign with field compare when l        
-      *ess (should fail)"                                                       
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-BEFORE-EACH                                               
-           MOVE "Greater-than-or-equal-to-sign with field compare when l        
-      -    "ess (should fail)"                                                  
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-INITIALIZE-MOCK-COUNT                                     
-            MOVE 475.061 TO WS-FIELD-1                                          
-           ADD 1 TO UT-TEST-CASE-COUNT                                          
-           SET UT-REVERSE-COMPARE TO TRUE                                       
-           SET UT-NUMERIC-COMPARE TO TRUE                                       
-           MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
-           MOVE 475.062 TO UT-EXPECTED-NUMERIC                                  
-           SET UT-RELATION-LT TO TRUE                                           
-           PERFORM UT-CHECK-EXPECTATION                                         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-AFTER-EACH                                                
       *-------- "Not greater-than-or-equal-to-sign with field compare wh        
       *en less"                                                                 
            MOVE SPACES                                                          
@@ -927,46 +557,6 @@
            SET UT-NUMERIC-COMPARE TO TRUE                                       
            MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
            MOVE 475.063 TO UT-EXPECTED-NUMERIC                                  
-           SET UT-RELATION-LT TO TRUE                                           
-           PERFORM UT-CHECK-EXPECTATION                                         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-AFTER-EACH                                                
-      *-------- "Not greater-than-or-equal-to-sign with field compare wh        
-      *en equal (should fail)"                                                  
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-BEFORE-EACH                                               
-           MOVE "Not greater-than-or-equal-to-sign with field compare wh        
-      -    "en equal (should fail)"                                             
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-INITIALIZE-MOCK-COUNT                                     
-            MOVE 475.062 TO WS-FIELD-1                                          
-           ADD 1 TO UT-TEST-CASE-COUNT                                          
-           SET UT-NORMAL-COMPARE TO TRUE                                        
-           SET UT-NUMERIC-COMPARE TO TRUE                                       
-           MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
-           MOVE 475.062 TO UT-EXPECTED-NUMERIC                                  
-           SET UT-RELATION-LT TO TRUE                                           
-           PERFORM UT-CHECK-EXPECTATION                                         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-AFTER-EACH                                                
-      *-------- "Not greater-than-or-equal-to-sign with field compare wh        
-      *en greater (should fail)"                                                
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-BEFORE-EACH                                               
-           MOVE "Not greater-than-or-equal-to-sign with field compare wh        
-      -    "en greater (should fail)"                                           
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-INITIALIZE-MOCK-COUNT                                     
-            MOVE 475.063 TO WS-FIELD-1                                          
-           ADD 1 TO UT-TEST-CASE-COUNT                                          
-           SET UT-NORMAL-COMPARE TO TRUE                                        
-           SET UT-NUMERIC-COMPARE TO TRUE                                       
-           MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
-           MOVE 475.062 TO UT-EXPECTED-NUMERIC                                  
            SET UT-RELATION-LT TO TRUE                                           
            PERFORM UT-CHECK-EXPECTATION                                         
            MOVE SPACES                                                          
@@ -1012,26 +602,6 @@
            MOVE SPACES                                                          
                TO UT-TEST-CASE-NAME                                             
            PERFORM UT-AFTER-EACH                                                
-      *-------- "Less-than-or-equal-to-sign with field compare when grea        
-      *ter (should fail)"                                                       
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-BEFORE-EACH                                               
-           MOVE "Less-than-or-equal-to-sign with field compare when grea        
-      -    "ter (should fail)"                                                  
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-INITIALIZE-MOCK-COUNT                                     
-            MOVE 475.063 TO WS-FIELD-1                                          
-           ADD 1 TO UT-TEST-CASE-COUNT                                          
-           SET UT-REVERSE-COMPARE TO TRUE                                       
-           SET UT-NUMERIC-COMPARE TO TRUE                                       
-           MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
-           MOVE 475.062 TO UT-EXPECTED-NUMERIC                                  
-           SET UT-RELATION-GT TO TRUE                                           
-           PERFORM UT-CHECK-EXPECTATION                                         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-AFTER-EACH                                                
       *-------- "Not less-than-or-equal-to-sign with field compare when         
       *greater"                                                                 
            MOVE SPACES                                                          
@@ -1047,46 +617,6 @@
            SET UT-NUMERIC-COMPARE TO TRUE                                       
            MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
            MOVE 475.062 TO UT-EXPECTED-NUMERIC                                  
-           SET UT-RELATION-GT TO TRUE                                           
-           PERFORM UT-CHECK-EXPECTATION                                         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-AFTER-EACH                                                
-      *-------- "Not less-than-or-equal-to-sign with field compare when         
-      *equal (should fail)"                                                     
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-BEFORE-EACH                                               
-           MOVE "Not less-than-or-equal-to-sign with field compare when         
-      -    "equal (should fail)"                                                
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-INITIALIZE-MOCK-COUNT                                     
-            MOVE 475.062 TO WS-FIELD-1                                          
-           ADD 1 TO UT-TEST-CASE-COUNT                                          
-           SET UT-NORMAL-COMPARE TO TRUE                                        
-           SET UT-NUMERIC-COMPARE TO TRUE                                       
-           MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
-           MOVE 475.062 TO UT-EXPECTED-NUMERIC                                  
-           SET UT-RELATION-GT TO TRUE                                           
-           PERFORM UT-CHECK-EXPECTATION                                         
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-AFTER-EACH                                                
-      *-------- "Not less-than-or-equal-to-sign with field compare when         
-      *less (should fail)"                                                      
-           MOVE SPACES                                                          
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-BEFORE-EACH                                               
-           MOVE "Not less-than-or-equal-to-sign with field compare when         
-      -    "less (should fail)"                                                 
-               TO UT-TEST-CASE-NAME                                             
-           PERFORM UT-INITIALIZE-MOCK-COUNT                                     
-            MOVE 475.062 TO WS-FIELD-1                                          
-           ADD 1 TO UT-TEST-CASE-COUNT                                          
-           SET UT-NORMAL-COMPARE TO TRUE                                        
-           SET UT-NUMERIC-COMPARE TO TRUE                                       
-           MOVE WS-FIELD-1 TO UT-ACTUAL-NUMERIC                                 
-           MOVE 475.063 TO UT-EXPECTED-NUMERIC                                  
            SET UT-RELATION-GT TO TRUE                                           
            PERFORM UT-CHECK-EXPECTATION                                         
            MOVE SPACES                                                          
